@@ -4,6 +4,10 @@ btns.forEach((button) => {
     button.addEventListener('click', playerPlay);
 });
 
+// results display
+const playerscorediv = document.querySelector('.player');
+const computerscorediv = document.querySelector('.computer');
+const resultsmessage = document.querySelector('.result');
 
 
 // vvv GAME FUNCTIONS vvv
@@ -37,20 +41,6 @@ function computerPlay() {
     }
     return computer;
 }
-
-// create iefe function game that will keep playing rounds until one player wins 3 rounds(best 3 out of 5)
-// function game(player) {
-//     console.log("Game started\n\n\n")
-//     let i = 0;
-//     while(playerscore < 5 && computerscore < 5) {
-//         i++; //round tracker
-//         console.log(`Player: ${playerscore} Computer: ${computerscore} Round: ${i}`);
-//         // get computer input;
-//         let computer = computerPlay();
-//         // call playRound function  
-//         playRound(player, computer);
-//     }
-// }
 
 // create function to play single round of rock, paper, scissors
     //compare player input to each possible computer input
@@ -95,27 +85,31 @@ function playRound(player, computer) {
                 break;
             }
     }   
+    // display score. Had to
+    playerscorediv.textContent = `You ${playerscore}`;
+    computerscorediv.textContent = `Computer ${computerscore}`;
+
     // Show overall winner 
     if (playerscore > 4) {
-        console.log(`You won! ${playerscore} to ${computerscore}`);
+        resultsmessage.textContent =`You won! ${playerscore} to ${computerscore}`;
     }
     else if (computerscore > 4) {
-        console.log(`You lost! ${playerscore} to ${computerscore}`)
+        resultsmessage.textContent = `You lost! ${playerscore} to ${computerscore}`
     }
 }
 
 //display winner and increase winners score by 1
 
 function win(player, computer) {
-    console.log(`You win! ${player} beats ${computer}\n\n`);
+    resultsmessage.textContent = `You win! ${player} beats ${computer}\n\n`;
     playerscore++;
 }
 
 function lose(player, computer) {
-    console.log(`You lose! ${computer} beats ${player}\n\n`);
+    resultsmessage.textContent = `You lose! ${computer} beats ${player}\n\n`;
     computerscore++;
 }
 
 function tie(player, computer) {
-    console.log(`It's a tie! You both chose ${player}\n\n`);
+    resultsmessage.textContent = `It's a tie! You both chose ${player}\n\n`;
 }
