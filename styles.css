@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: transparent;
+    outline: 4px solid #64b6ac;
+}
+
+.buttons {
+    display: flex;
+    /* justify-content: center; */
+    gap: space-evenly;
+    /* margin: 0px 50px; */
+}
