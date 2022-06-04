@@ -8,15 +8,41 @@
     </head>
 
     <body>
+        <div class="title box">
+            <p class="title text">Choose your weapon</p>
+        </div>
         <div class="buttons">
-            <button id="rock" class="btn">Rock</button>
-            <button id="paper" class="btn">Paper</button>
-            <button id="scissors" class="btn">Scissors</button>
+            <div id="rock" class="btn">
+                <img class="img" src="images/istockphoto-837069714-612x612.jpg">
+                <div class="textbackground">
+                    <div class="btntext">Rock</div>
+                </div>
+            </div>
+            <div id="paper" class="btn">
+                <img class="pap img" src="images/5714d1c9e5f008fed5f2e29cacb6c30e.jpg">
+                <div class="textbackground">
+                    <div class="btntext">Paper</div>
+                </div>
+            </div>
+            <div id="scissors" class="btn">
+                <img class="img" src="images/scissors-icon-31.png">
+                <div class="textbackground">
+                    <div class="btntext">Scissors</div>
+                </div>
+            </div>
         </div>
         <div class="results">
             <div class ="result"></div>
-            <div class ="player"></div>
-            <div class ="computer"></div>
+            <div class="scores">
+                <div class="score">
+                    <div class ="player"></div>
+                    <p class="scoretext">YOU</p>
+                </div>
+                <div class="score">
+                    <div class ="computer"></div>
+                    <p class="scoretext">CPU</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

@@ -12,6 +12,9 @@ const resultsmessage = document.querySelector('.result');
 
 // vvv GAME FUNCTIONS vvv
 
+playerscorediv.textContent = `0`;
+computerscorediv.textContent = `0`;
+
 // set rounds won to 0
 let playerscore = 0;
 let computerscore = 0;
@@ -86,8 +89,8 @@ function playRound(player, computer) {
             }
     }   
     // display score. Had to
-    playerscorediv.textContent = `You ${playerscore}`;
-    computerscorediv.textContent = `Computer ${computerscore}`;
+    playerscorediv.textContent = `${playerscore}`;
+    computerscorediv.textContent = `${computerscore}`;
 
     // Show overall winner 
     if (playerscore > 4) {
